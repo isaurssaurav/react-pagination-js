@@ -2,6 +2,7 @@ const path = require('path');
 const context = path.join(__dirname, 'src/demo');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+
 module.exports = {
     context,
     entry: './index',

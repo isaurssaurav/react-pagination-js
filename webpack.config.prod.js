@@ -1,5 +1,5 @@
 const path = require('path');
-const context = path.join(__dirname, 'src/lib');
+const context = path.join(__dirname, 'src');
 module.exports = {
     context,
     entry: './index',

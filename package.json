@@ -7,9 +7,8 @@
     "prebuild": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm-run-all --parallel build:*",
-    "build:umd": "webpack --config ./webpack.config.prod.js --output-filename index.umd.js --mode development",
-    "build:umd.min": "webpack --config ./webpack.config.prod.js --output-filename index.umd.min.js --mode production",
-    "start:dev": "webpack-dev-server --config ./webpack.config.dev.js",
+    "build:umd": "webpack --config ./webpack.config.prod.js --output-filename index.umd.js --mode production",
+    "start:dev": "webpack --config ./webpack.config.dev.js --mode development && webpack-dev-server --config ./webpack.config.dev.js",
     "commit": "git-cz"
   },
   "repository": {
