@@ -1,0 +1,2 @@
+# React Pagination JS
+
