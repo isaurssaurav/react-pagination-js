@@ -1,7 +1,4 @@
 const path = require('path');
-/**
- * NOTE: change to src/lib 
- */
 const context = path.join(__dirname, 'src/demo');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
