@@ -28,10 +28,24 @@ class App extends React.Component {
                         changeCurrentPage={this.changeCurrentPage}
                         theme="default"
                         showFirstLastPages={true}
-                        lastPageText="last"
-                        firstPageText="first"
-                        nextPageText="next"
-                        previousPageText="prev"
+                    />
+                    <h3>Dark</h3>
+                    <Pagination
+                        currentPage={this.state.currentPage}
+                        totalPages={10}
+                        changeCurrentPage={this.changeCurrentPage}
+                        theme="dark"
+                        showFirstLastPages={true}
+                    />
+
+
+                    <h3>Border Bottom</h3>
+
+                    <Pagination
+                        currentPage={this.state.currentPage}
+                        totalPages={10}
+                        changeCurrentPage={this.changeCurrentPage}
+                        theme="border-bottom"
                     />
 
                     <h3>Bootstrap</h3>
@@ -43,6 +57,15 @@ class App extends React.Component {
                         theme="bootstrap"
                     />
 
+
+                    <h3>Circle</h3>
+
+                    <Pagination
+                        currentPage={this.state.currentPage}
+                        totalPages={10}
+                        changeCurrentPage={this.changeCurrentPage}
+                        theme="circle"
+                    />
 
                 </div>
             </div>

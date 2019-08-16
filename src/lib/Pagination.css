@@ -1,10 +1,13 @@
-
+/**
+Default
+**/
 .react-pagination-js-default ul{
   list-style: none;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   list-style: none;
   font-size: .875em;
+  font-family: inherit;
 }
 .react-pagination-js-default .page {
   display: inline-block;
@@ -61,12 +64,77 @@
   text-shadow: 0px 0px 3px rgba(0,0,0, .5);
 }
 
+/**
+Dark
+**/
+.react-pagination-js-dark ul{
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  list-style: none;
+  font-size: .875em;
+  font-family: inherit;
+}
+.react-pagination-js-dark .page {
+  display: inline-block;
+  padding: 0px 9px;
+  margin-right: 4px;
+  border-radius: 3px;
+
+  border: solid 1px #c0c0c0;
+  background: #616161;
+  box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8);
+  color: #f0f0f0;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+.react-pagination-js-dark .is-active {
+  display: inline-block;
+  padding: 0px 9px;
+  margin-right: 4px;
+  border-radius: 3px;
+  
+  border: solid 1px #c0c0c0;
+  background: #332e2e;
+  text-shadow: 0px 1px 0px rgba(255,255,255, 1);
+  color: #717171;
+ 
+
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 0px 3px rgba(0,0,0, .5);
+  cursor: pointer;
+}
+.react-pagination-js-dark .pageElli {
+  display: inline-block;
+  padding: 0px 9px;
+  margin-right: 4px;
+
+  font-weight: bold;
+  text-decoration: none;
+  color: #717171;
+}
 
 
+.react-pagination-js-dark .page:hover, .page.gradient:hover {
+  background: #fefefe;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0, .5)), to(rgba(0,0,0, .5)));
+  background: -moz-linear-gradient(0% 0% 270deg,rgba(0,0,0, .5), rgba(0,0,0, .5));
+}
+
+.react-pagination-js-dark .page.active {
+  border: none;
+  background: #616161;
+  box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8);
+  color: #f0f0f0;
+  text-shadow: 0px 0px 3px rgba(0,0,0, .5);
+}
 
 
-
-
+/**
+Bootstrap css
+**/
 .react-pagination-js-bootstrap ul{
 
   padding: 0 0 0 0;
@@ -86,6 +154,7 @@
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-family: inherit;
 }
 .react-pagination-js-bootstrap .page {
   float: left;
@@ -143,3 +212,128 @@
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
+
+/**
+Border Bottom
+*/
+.react-pagination-js-border-bottom ul{
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  list-style: none;
+  font-size: .875em;
+  font-family: inherit;
+  line-height: 2em;
+}
+.react-pagination-js-border-bottom .page {
+  display: inline-block;
+  padding: 0px 1px;
+    margin: 0px 9px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.react-pagination-js-border-bottom .is-active {
+  display: inline-block;
+  padding: 0px 1px;
+  margin: 0px 9px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 1px solid #0088cc;
+  color: #0088cc
+}
+.react-pagination-js-border-bottom .pageElli {
+  display: inline-block;
+  padding: 0px 9px;
+  margin-right: 4px;
+
+  font-weight: bold;
+  text-decoration: none;
+  color: #717171;
+  
+}
+
+
+.react-pagination-js-border-bottom .page:hover{
+  font-weight: bold;
+  border-bottom: 1px solid #0088cc;
+}
+/**
+Circle
+**/
+
+.react-pagination-js-circle ul{
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  list-style: none;
+  font-size: .875em;
+  font-family: inherit;
+  line-height: 2em;
+}
+.react-pagination-js-circle .page {
+  display: inline-block;
+  padding: 0px 1px;
+    margin: 0px 9px;
+  text-decoration: none;
+  cursor: pointer;
+  
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  padding: 0;
+  margin: auto 5px;
+  text-align: center;
+  position: relative;
+}
+.react-pagination-js-circle .is-active {
+  display: inline-block;
+  padding: 0px 1px;
+  margin: 0px 9px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  color: #0088cc;
+  border: 3px solid #0088cc;
+  border-radius: 100%;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  padding: 0;
+  margin: auto 5px;
+  text-align: center;
+  position: relative;
+}
+.react-pagination-js-circle .pageElli {
+  display: inline-block;
+  padding: 0px 9px;
+  margin-right: 4px;
+
+  font-weight: bold;
+  text-decoration: none;
+  color: #717171;
+  
+}
+
+
+.react-pagination-js-circle .page:hover{
+  font-weight: bold;
+  color: #0088cc;
+  border: 3px solid #0088cc;
+}
+.circle a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  text-align: center;
+  margin: auto 5px;
+}
+
+.circle a.is-active {
+  border: 3px solid #2ecc71;
+  border-radius: 100%;
+
+}
+
