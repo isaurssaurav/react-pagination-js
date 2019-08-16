@@ -20,22 +20,27 @@ class App extends React.Component {
                         current Page: <strong>{this.state.currentPage}</strong>
                     </p>
                     <hr />
-                    <h3>Bottom Border</h3>
-
-                    <Pagination
-                        currentPage={this.state.currentPage}
-                        totalPages={2}
-                        changeCurrentPage={this.changeCurrentPage}
-                        theme="bottom-border"
-                    />
-
-                    <h3>Dark</h3>
+                    <h3>Default</h3>
 
                     <Pagination
                         currentPage={this.state.currentPage}
                         totalPages={10}
                         changeCurrentPage={this.changeCurrentPage}
-                        theme="dark"
+                        theme="default"
+                        showFirstLastPages={true}
+                        lastPageText="last"
+                        firstPageText="first"
+                        nextPageText="next"
+                        previousPageText="prev"
+                    />
+
+                    <h3>Bootstrap</h3>
+
+                    <Pagination
+                        currentPage={this.state.currentPage}
+                        totalPages={10}
+                        changeCurrentPage={this.changeCurrentPage}
+                        theme="bootstrap"
                     />
 
 

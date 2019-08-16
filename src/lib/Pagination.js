@@ -1,6 +1,8 @@
 import React from "react";
 import "./Pagination.css";
 
+
+
 export default class ReactPagination extends React.Component {
     constructor(props) {
         super(props);
@@ -10,6 +12,9 @@ export default class ReactPagination extends React.Component {
             showEllipis: true
         };
     }
+    /**
+     * 
+     */
     componentDidMount() {
         if (this.props.totalPages <= 5) {
             var fArray = [];
@@ -39,6 +44,10 @@ export default class ReactPagination extends React.Component {
             this.setState({ lastNumber: this.props.totalPages });
         }
     }
+    /**
+     * 
+     * 
+     */
     componentWillReceiveProps(nextProps) {
         if (nextProps.totalPages <= 5) {
             var fArray = [];
@@ -76,11 +85,17 @@ export default class ReactPagination extends React.Component {
             }
         }
     }
+    /**
+     * go to current - 1 page
+     */
     prev = () => {
         if (this.props.currentPage > 1) {
             this.props.changeCurrentPage(this.props.currentPage - 1);
         }
     };
+    /**
+     * go to current + 1 page
+     */
     next = () => {
         if (this.props.currentPage < this.props.totalPages) {
             this.props.changeCurrentPage(this.props.currentPage + 1);
@@ -92,9 +107,11 @@ export default class ReactPagination extends React.Component {
     showEllipsis = () => {
         if (this.state.showEllipis) {
             return (
-                <a >
-                    <li className="pageElli">...</li>
+                <li className="pageElli">
+                    <a >
+                        ...
                 </a>
+                </li>
             );
         }
     };
@@ -107,69 +124,95 @@ export default class ReactPagination extends React.Component {
     showLastPagi = () => {
         if (this.props.currentPage !== this.props.totalPages) {
             return (
-                <a
-                    className={this.isactive(this.props.totalPages) ? "is-active" : "page"}
+                <li className={this.isactive(this.props.totalPages) ? "is-active" : "page"}
                     onClick={() => {
                         this.changeCurrentPage(this.props.totalPages);
                     }}
+                ><a
+
+
                 >
-                    <li>{this.props.totalPages}</li>
-                </a>
+                        {this.props.totalPages}
+                    </a></li>
             );
         }
     };
     showPrev = () => {
         if (this.props.currentPage != 1) {
             return (
-                <a className="page" onClick={this.prev}>
-                    <li>{"⟨"}</li>
-                </a>
+                <li className="page" onClick={this.prev}><a >
+                    {this.props.previousPageText}
+                </a></li >
             );
         }
     };
     showNext = () => {
         if (this.props.currentPage < this.props.totalPages) {
             return (
-                <a className="page" onClick={this.next}>
-                    <li>{"⟩"}</li>
-                </a>
+                <li className="page" onClick={this.next} ><a >
+                    {this.props.nextPageText}
+                </a></li>
             );
         }
     };
 
+    showFirstPage = () => {
+        return this.props.showFirstLastPages ? <li className="page" onClick={() => {
+            this.changeCurrentPage(1);
+        }}> <a
+
+
+        >
+                {this.props.firstPageText}
+            </a> </li> : ""
+    }
+
+    showLastPage = () => {
+        return this.props.showFirstLastPages ? <li className="page" onClick={() => {
+            this.changeCurrentPage(this.props.totalPages);
+        }}> <a
+
+
+        >
+                {this.props.lastPageText}
+            </a></li> : ""
+    }
+
     render() {
         return (
-            <div className={`react-pagination-js-default`}>
+            <div className={`react-pagination-js-${this.props.theme}`}>
                 <ul>
-
+                    {this.showFirstPage()}
                     {this.showPrev()}
                     {this.props.totalPages <= 5 ? (
                         this.state.firstThreeArray.map((no, index) => {
                             return (
-                                <a
-                                    key={index}
-                                    className={this.isactive(no) ? "is-active" : "page"}
-                                    onClick={() => {
-                                        this.changeCurrentPage(no);
-                                    }}
-                                >
-                                    <li>{no}</li>
-                                </a>
+                                <li key={index} className={this.isactive(no) ? "is-active" : "page"} onClick={() => {
+                                    this.changeCurrentPage(no);
+                                }}>
+                                    <a
+
+
+
+                                    >
+                                        {no}
+                                    </a></li>
                             );
                         })
                     ) : (
                             <React.Fragment>
                                 {this.state.firstThreeArray.map((no, index) => {
                                     return (
-                                        <a
-                                            key={index}
-                                            className={this.isactive(no) ? "is-active" : "page"}
-                                            onClick={() => {
-                                                this.changeCurrentPage(no);
-                                            }}
-                                        >
-                                            <li>{no}</li>
-                                        </a>
+                                        <li key={index} className={this.isactive(no) ? "is-active" : "page"} onClick={() => {
+                                            this.changeCurrentPage(no);
+                                        }}>
+                                            <a
+
+
+
+                                            >
+                                                {no}
+                                            </a></li>
                                     );
                                 })}
                                 {this.showEllipsis()}
@@ -178,14 +221,20 @@ export default class ReactPagination extends React.Component {
                             </React.Fragment>
                         )}
                     {this.showNext()}
+                    {this.showLastPage()}
                 </ul>
             </div>
         );
     }
 }
+
 ReactPagination.defaultProps = {
     theme: "default",
     currentPage: 1,
     totalPages: 15,
-    hideFirstLastPages: false
+    showFirstLastPages: true,
+    lastPageText: "»",
+    firstPageText: "«",
+    nextPageText: "⟩",
+    previousPageText: "⟨"
 };
