@@ -9,7 +9,8 @@
     "build": "npm-run-all --parallel build:*",
     "build:umd": "webpack --config ./webpack.config.prod.js --output-filename index.umd.js --mode production",
     "start:dev": "webpack --config ./webpack.config.dev.js --mode development && webpack-dev-server --config ./webpack.config.dev.js",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "validate": "npm run build"
   },
   "repository": {
     "type": "git",

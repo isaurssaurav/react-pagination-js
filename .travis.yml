@@ -7,6 +7,8 @@ node_js:
 install: npm install
 before_script:
   - npm prune
+script:
+  - npm run validate
 branches:
   only:
     - master
