@@ -1,5 +1,5 @@
 # react-pagination-js
-git ![travis build](https://img.shields.io/travis/isaurssaurav/react-pagination-js?style=flat-square)
+![travis build](https://img.shields.io/travis/isaurssaurav/react-pagination-js?style=flat-square)
 
 Simple and light weight pagination for react. This library is updated version of [react-pagination-library](https://github.com/isaurssaurav/react-pagination). It comes with five themes and are easy to customize.
 1. default
