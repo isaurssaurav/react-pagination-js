@@ -25,6 +25,7 @@ $ npm install react-pagination-js
 ```js
 import React from "react";
 import Pagination from "react-pagination-js";
+import "react-pagination-js/dist/styles.css"; // import css
 
 class App extends React.Component {
   state = {
