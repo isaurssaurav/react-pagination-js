@@ -1,6 +1,6 @@
 {
   "name": "react-pagination-js",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Simple, light weight pagination for react",
   "main": "dist/index.umd.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "build:umd": "webpack --config ./webpack.config.prod.js --output-filename index.umd.js --mode production",
     "start:dev": "webpack --config ./webpack.config.dev.js --mode development && webpack-dev-server --config ./webpack.config.dev.js",
     "commit": "git-cz",
-    "validate": "npm run build"
+    "validate": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "react",
@@ -27,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaurssaurav/react-pagination-js.git"
+    "url": "https://github.com/isaurssaurav/react-pagination-js.git"
   },
   "files": [
     "dist"
@@ -47,16 +48,16 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "cz-conventional-changelog": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
     "npm-run-all": "^4.1.5",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0",
     "rimraf": "^2.6.3",
     "semantic-release": "^15.13.21",
+    "style-loader": "^1.0.0",
     "validate-commit-msg": "^2.14.0",
-    "cz-conventional-changelog": "^3.0.2"
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
   },
   "config": {
     "ghooks": {

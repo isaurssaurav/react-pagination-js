@@ -9,6 +9,8 @@ before_script:
   - npm prune
 script:
   - npm run validate
+after_success:
+  - npm run semantic-release
 branches:
   only:
     - master
