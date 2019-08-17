@@ -10,6 +10,7 @@ Simple and light weight pagination for react. This library is updated version of
 ## Demo
 
 ![Example](https://imge.to/images/2019/08/17/V8j1w.png)
+
 [click here](https://isaurssaurav.github.io/react-pagination-js/) for live demo.
 
 ## Installation
