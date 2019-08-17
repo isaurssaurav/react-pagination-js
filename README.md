@@ -42,7 +42,6 @@ class App extends React.Component {
           currentPage={this.state.currentPage}
           totalPages={10}
           changeCurrentPage={this.changeCurrentPage}
-          theme="bottom-border"
         />
         <h2>current Page:{this.state.currentPage}</h2>
       </div>
