@@ -55,7 +55,8 @@ export default App;
 
 | Name                | Type     | Default   | Description                                                          |
 | ------------------- | -------- | --------- | -------------------------------------------------------------------- |
-| `totalPages`        | Number   | `10`      | **Required.** Total number of pages which you are going to display   |
+| `totalSize`       | Number   |    |  **Required.** Total data size |
+| `sizePerPage`       | Number   | 10   |  **Optional.** Number of data to display in page |
 | `currentPage`       | Number   | `1`       | **Required.** Active page number                                     |
 | `changeCurrentPage` | Function |           | **Required.** Page change handler. Receive current pageNumber as arg |
 | `theme`             | string   | `default` | **Optional.** theme : `default`,`dark`, `bootstrap`, `border-bottom`, `circle` |
@@ -63,5 +64,4 @@ export default App;
 | `firstPageText`       | string   | `«`   |  **Optional.** first page text. |
 | `lastPageText`       | string   | `»`   |  **Optional.** last page text. |
 | `nextPageText`       | string   | `⟩`   |  **Optional.** next page text. |
-| `previousPageText`       | string   | `⟨`   |  **Optional.** previous page text. |
-
+| `numberOfPagesNextToActivePage`       | Number   | 1   |  **Optional.** Number of page to show next to active page |

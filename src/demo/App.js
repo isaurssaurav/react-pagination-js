@@ -15,7 +15,7 @@ class App extends React.Component {
         return (
 
             <div className="container">
-                <a class="github-fork-ribbon" href="https://github.com/isaurssaurav/react-pagination-js" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+                <a className="github-fork-ribbon" href="https://github.com/isaurssaurav/react-pagination-js" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
                 <h1>React Pagination Js</h1>
                 <h2>Simple and light weight</h2>
                 {/* <p>
@@ -28,7 +28,7 @@ class App extends React.Component {
                     <div className="demo">
                         <Pagination
                             currentPage={this.state.currentPage}
-                            totalPages={10}
+                            totalSize={100}
                             changeCurrentPage={this.changeCurrentPage}
                             theme="bootstrap"
                         />
@@ -37,7 +37,8 @@ class App extends React.Component {
                     <div className="code">
                         <code >{` <Pagination\n
                             currentPage={this.state.currentPage}\n
-                            totalPages={10}\n
+                            totalSize={100}\n
+                            sizePerPage={10}\n
                             changeCurrentPage={this.changeCurrentPage}\n
                             theme="bootstrap"\n
                         />`}
@@ -51,7 +52,7 @@ class App extends React.Component {
                     <div className="demo">
                         <Pagination
                             currentPage={this.state.currentPage}
-                            totalPages={10}
+                            totalSize={100}
                             changeCurrentPage={this.changeCurrentPage}
                             theme="default"
                             showFirstLastPages={true}
@@ -60,7 +61,8 @@ class App extends React.Component {
                     <div className="code">
                         <code >{`<Pagination \n
                             currentPage={this.state.currentPage}\n
-                            totalPages={10}\n
+                            totalSize={100}\n
+                            sizePerPage={10}\n
                             changeCurrentPage={this.changeCurrentPage}\n
                     />`}
 
@@ -73,7 +75,7 @@ class App extends React.Component {
                     <div className="demo">
                         <Pagination
                             currentPage={this.state.currentPage}
-                            totalPages={10}
+                            totalSize={100}
                             changeCurrentPage={this.changeCurrentPage}
                             theme="dark"
                             showFirstLastPages={true}
@@ -82,7 +84,8 @@ class App extends React.Component {
                     <div className="code">
                         <code >{`<Pagination\n
                     currentPage={this.state.currentPage}\n
-                    totalPages={10}\n
+                    totalSize={100}\n
+                    sizePerPage={10}\n
                     changeCurrentPage={this.changeCurrentPage}\n
                     theme="dark"\n
                 />`}
@@ -98,7 +101,7 @@ class App extends React.Component {
                     <div className="demo">
                         <Pagination
                             currentPage={this.state.currentPage}
-                            totalPages={10}
+                            totalSize={100}
                             changeCurrentPage={this.changeCurrentPage}
                             theme="border-bottom"
                         />
@@ -106,7 +109,8 @@ class App extends React.Component {
                     <div className="code">
                         <code >{`<Pagination\n
                             currentPage={this.state.currentPage}\n
-                            totalPages={10}\n
+                            totalSize={100}\n
+                            sizePerPage={10}\n
                             changeCurrentPage={this.changeCurrentPage}\n
                             theme="border-bottom"\n
                         />`}
@@ -123,7 +127,7 @@ class App extends React.Component {
 
                         <Pagination
                             currentPage={this.state.currentPage}
-                            totalPages={10}
+                            totalSize={100}
                             changeCurrentPage={this.changeCurrentPage}
                             theme="circle"
                         />
@@ -133,7 +137,8 @@ class App extends React.Component {
                         <code >{` 
                             <Pagination\n
                                 currentPage={this.state.currentPage}\n
-                                totalPages={10}\n
+                                totalSize={100}\n
+                                sizePerPage={10}\n
                                 changeCurrentPage={this.changeCurrentPage}\n
                                 theme="circle"\n    
                             />`}
@@ -149,7 +154,7 @@ class App extends React.Component {
 
                         <Pagination
                             currentPage={this.state.currentPage}
-                            totalPages={10}
+                            totalSize={100}
                             changeCurrentPage={this.changeCurrentPage}
 
                             showFirstLastPages={false}
@@ -160,7 +165,8 @@ class App extends React.Component {
                         <code >{` 
                                 <Pagination\n 
                                 currentPage={this.state.currentPage}\n 
-                                totalPages={10}\n 
+                                totalSize={100}\n 
+                                sizePerPage={10}\n
                                 changeCurrentPage={this.changeCurrentPage}\n 
                                 showFirstLastPages={false}\n 
                                 />`}
@@ -176,7 +182,7 @@ class App extends React.Component {
 
                         <Pagination
                             currentPage={this.state.currentPage}
-                            totalPages={10}
+                            totalSize={100}
                             changeCurrentPage={this.changeCurrentPage}
                             firstPageText="first"
                             lastPageText="last"
@@ -189,7 +195,8 @@ class App extends React.Component {
                     <div className="code">
                         <code >{`  <Pagination \n
                             currentPage={this.state.currentPage}\n
-                            totalPages={10}\n
+                            totalSize={100}\n
+                            sizePerPage={10}\n
                             changeCurrentPage={this.changeCurrentPage}\n
                             firstPageText="first"\n
                             lastPageText="last"\n
