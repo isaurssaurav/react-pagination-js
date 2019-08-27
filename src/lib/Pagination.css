@@ -9,6 +9,13 @@ Default
   font-size: .875em;
   font-family: inherit;
 }
+
+li.page.disabled {
+  cursor: default;
+  pointer-events: none;
+  color: #999999;
+}
+
 .react-pagination-js-default .page {
   display: inline-block;
   padding: 0px 9px;
